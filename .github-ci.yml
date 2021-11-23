@@ -1,0 +1,23 @@
+stages:
+ - test
+ - build
+  
+unit test:
+  stages: test
+  script:
+   - echo "test 1"
+   
+linter:
+  stages: test
+  script:
+   - echo "test 2"
+
+type test:
+  stages: test
+  script:
+   - echo "test 3"   
+  
+build:
+ stages: build
+ script:
+  - ./autogit.sh
